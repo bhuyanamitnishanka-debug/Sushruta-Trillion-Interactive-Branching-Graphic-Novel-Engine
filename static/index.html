@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sushruta-Trillion: Advanced Interface</title>
+    <style>
+        :root { --bg: #0f172a; --card: #1e293b; --accent: #38bdf8; --text: #f8fafc; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: var(--bg); color: var(--text); margin: 0; padding: 20px; }
+        .container { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+        header { grid-column: span 2; border-bottom: 2px solid var(--card); padding-bottom: 10px; }
+        h1 { margin: 0; color: var(--accent); font-size: 24px; }
+        .card { background: var(--card); border-radius: 12px; padding: 24px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); height: fit-content; }
+        .slider-group { margin-bottom: 18px; }
+        label { display: block; font-weight: 500; font-size: 14px; margin-bottom: 6px; color: #94a3b8; }
+        .slider-row { display: flex; align-items: center; gap: 12px; }
+        input[type="range"], select { width: 100%; accent-color: var(--accent); background: #334155; color: white; border: 1px solid #475569; padding: 8px; border-radius: 6px; }
+        input[type="range"] { padding: 0; }
+        .val-box { width: 60px; text-align: right; font-family: monospace; font-size: 15px; color: var(--accent); font-weight: bold; }
+        button { background: var(--accent); color: var(--bg); border: none; width: 100%; padding: 12px; border-radius: 6px; font-weight: bold; cursor: pointer; font-size: 16px; margin-top: 10px; }
+        button:hover { opacity: 0.9; }
+        .status-badge { display: inline-block; padding: 6px 12px; border-radius: 6px; font-weight: bold; margin-bottom: 15px; font-size: 14px; text-transform: uppercase; }
+        .APPROVED { background: #16a34a; color: white; }
+        .WARNING_HIGH_ACCUMULATION, .WARNING_VASCULAR_FRAGILITY { background: #ca8a04; color: white; }
+        .CRITICAL_TOXICITY, .CRITICAL_HEMORRHAGE_RISK { background: #dc2626; color: white; }
+        .vector-section { border-left: 4px solid var(--accent); padding-left: 12px; margin-bottom: 20px; display: none; }
+        .vector-title { font-weight: bold; font-size: 15px; color: var(--accent); text-transform: uppercase; margin-bottom: 8px; }
+        .metric-row { display: flex; justify-content: space-between; font-size: 14px; padding: 6px 0; border-bottom: 1px solid #334155; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Sushruta-Trillion: Multi-Class Informatics Engine</h1>
+        <p style="color: #64748b; margin: 4px 0 0 0;">Unified Medical Class Pipeline and Safety Sandboxing Interface</p>
+    </header>
+
+    <!-- LEFT COLUMN: INPUT PARAMETER PANEL -->
+    <div class="card">
+        <h2 style="margin-top:0; font-size:18px; border-bottom:1px solid #334155; padding-bottom:8px;">1. Dynamic Parameter Interface</h2>
+        
+        <div class="slider-group">
+            <label>Select Target Medical Formulation Class</label>
+            <select id="classSelector" onchange="toggleFormulationFields()">
+                <option value="neuro-sleep">Neuro-Sleep Regulation System (NH-Synchro)</option>
+                <option value="cardio-stroke">Cardiovascular Stroke Prophylaxis (CV-StrokeShield)</option>
+                <option value="comp-oncology">Computational Oncology (ONCO-PathCheck)</option>
+                <option value="tissue-regeneration">Automated Deep-Tissue Regeneration (REGEN-TissueMatrix)</option>
+            </select>
+        </div>
+
+        <!-- NEURO-SLEEP INPUT SLIDER DOM SUBTREE -->
+        <div id="neuro-fields">
+            <div class="slider-group">
+                <label>Allopathic Hypnotic Core (mg)</label>
+                <div class="slider-row"><input type="range" id="hypnotic" min="0" max="50" step="0.5" value="10" oninput="updateVal('hypnotic_val', this.value)"><div class="val-box" id="hypnotic_val">10</div></div>
+            </div>
+            <div class="slider-group">
+                <label>Fermented Asava Carrier (mL)</label>
+                <div class="slider-row"><input type="range" id="asava" min="0" max="10" step="0.1" value="2.0" oninput="updateVal('asava_val', this.value)"><div class="val-box" id="asava_val">2.0</div></div>
+            </div>
+            <div class="slider-group">
+                <label>Ashwagandha Extract Matrix (mg)</label>
+                <div class="slider-row"><input type="range" id="ashwagandha" min="0" max="1000" step="10" value="250" oninput="updateVal('ashwagandha_val', this.value)"><div class="val-box" id="ashwagandha_val">250</div></div>
+            </div>
+            <div class="slider-group">
+                <label>Snayu Stimulants [Jyotishmati/Kupilu] (mg)</label>
+                <div class="slider-row"><input type="range" id="snayu" min="0" max="150" step="5" value="25" oninput="updateVal('snayu_val', this.value)"><div class="val-box" id="snayu_val">25</div></div>
+            </div>
+            <div class="slider-group">
+                <label>Hemodynamic BP Modulators (mg)</label>
+                <div class="slider-row"><input type="range" id="bp" min="0" max="150" step="5" value="50" oninput="updateVal('bp_val', this.value)"><div class="val-box" id="bp_val">50</div></div>
+            </div>
+        </div>
+
+        <!-- CARDIO-STROKE INPUT SLIDER DOM SUBTREE -->
+        <div id="cardio-fields" style="display:none;">
+            <div class="slider-group">
+                <label>Allopathic Antiplatelet Payload (mg)</label>
+                <div class="slider-row"><input type="range" id="antiplatelet" min="0" max="150" step="5" value="75" oninput="updateVal('antiplatelet_val', this.value)"><div class="val-box" id="antiplatelet_val">75</div></div>
+            </div>
+            <div class="slider-group">
+                <label>Arjuna Endothelial Wall Shielder (mg)</label>
+                <div class="slider-row"><input type="range" id="arjuna" min="0" max="1000" step="25" value="500" oninput="updateVal('arjuna_val', this.value)"><div class="val-box" id="arjuna_val">500</div></div>
+            </div>
+            <div class="slider-group">
+                <label>Purified Guggulu Lipid Plaque Resolver (mg)</label>
+                <div class="slider-row"><input type="range" id="guggulu" min="0" max="400" step="10" value="150" oninput="updateVal('guggulu_val', this.value)"><div class="val-box" id="guggulu_val">150</div></div>
+            </div>
+        </div>
+
+        <!-- COMPUTATIONAL ONCOLOGY INPUT SLIDER DOM SUBTREE -->
+        <div id="onco-fields" style="display:none;">
+            <div class="slider-group">
+                <label>Allopathic Chemotherapy Intensity (mg/m²)</label>
+                <div class="slider-row"><input type="range" id="chemo" min="0" max="100" step="1" value="45" oninput="updateVal('chemo_val', this.value)"><div class="val-box" id="chemo_val">45</div></div>
+            </div>
+            <div class="slider-group">
+                <label>Tulsi / Curcumin Apoptosis Matrix (mg)</label>
+                <div class="slider-row"><input type="range" id="apoptosis" min="0" max="800" step="20" value="320" oninput="updateVal('apoptosis_val', this.value)"><div class="val-box" id="apoptosis_val">320</div></div>
+            </div>
+            <div class="slider-group">
+                <label>Shatavari Cytoprotective Reserve (mg)</label>
+                <div class="slider-row"><input type="range" id="cytoprotective" min="0" max="400" step="10" value="120" oninput="updateVal('cytoprotective_val', this.value)"><div class="val-box" id="cytoprotective_val">120</div></div>
+            </div>
+        </div>
+
+        <!-- DEEP-TISSUE REGENERATION INPUT SLIDER DOM SUBTREE -->
+        <div id="tissue-fields" style="display:none;">
+            <div class="slider-group">
+                <label>Allopathic Growth Peptide [rhEGF] (mg)</label>
+                <div class="slider-row"><input type="range" id="peptide" min="0" max="50" step="0.5" value="20" oninput="updateVal('peptide_val', this.value)"><div class="val-box" id="peptide_val">20</div></div>
+            </div>
+            <div class="slider-group">
+                <label>Manjistha Extract Potency (mg)</label>
+                <div class="slider-row"><input type="range" id="manjistha" min="0" max="500" step="10" value="200" oninput="updateVal('manjistha_val', this.value)"><div class="val-box" id="manjistha_val">200</div></div>
+            </div>
+            <div class="slider-group">
+                <label>Shilajit Mineral Delivery Carrier (mg)</label>
+                <div class="slider-row"><input type="range" id="shilajit" min="0" max="1000" step="25" value="350" oninput="updateVal('shilajit_val', this.value)"><div class="val-box" id="shilajit_val">350</div></div>
+            </div>
+        </div>
+
+        <button onclick="executeUnifiedSimulation()">Compute Engine Vector Matrix</button>
+    </div>
+
+    <!-- RIGHT COLUMN: DYNAMIC SYSTEM OUTPUT VISUAL DISPLAYS -->
+    <div class="card">
+        <h2 style="margin-top:0; font-size:18px; border-bottom:1px solid #334155; padding-bottom:8px;">2. Visual Diagnostic Grid</h2>
+        <div>
+            <span id="badge" class="status-badge APPROVED">AWAITING ENGINE STIMULATION</span>
+            <span id="metric-label" style="float: right; font-family: monospace; color: #94a3b8;">Class Status: None</span>
+        </div>
+
+        <!-- VISUAL CONTAINER: NEURO LOG METRICS -->
+        <div id="out-neuro-section" class="vector-section" style="display:block;">
+            <div class="vector-title">🧠 Neuro-Endocrine &amp; Snayu Vector</div>
+            <div class="metric-row"><span>GABA Synaptic Binding Ingestion Rate:</span><span id="gaba_res" style="font-family:monospace;">--</span></div>
+            <div class="metric-row"><span>Snayu Stage Reflex Active Tone:</span><span id="snayu_res" style="font-family:monospace;">--</span></div>
+            <div class="metric-row"><span>Cortisol Suppression Index Matrix:</span><span id="cortisol_res" style="font-family:monospace;">--</span></div>
+            <div class="metric-row"><span>Blood Pressure Constancy Score:</span><span id="bp_res" style="font-family:monospace;">--</span></div>
+            <div class="metric-row"><span>Cytochrome P450 Hepatocyte Stress Score:</span><span id="cyp_res" style="font-family:monospace;">--</span></div>
+            <div class="metric-row"><span>Nocturnal Pancreatic Glucose Constancy:</span><span id="glucose_res" style="font-family:monospace;">--</span></div>
+        </div>
+
+        <!-- VISUAL CONTAINER: CARDIO LOG METRICS -->
+        <div id="out-cardio-section" class="vector-section">
+            <div class="vector-title">🩸 Hematological Clot &amp; Vascular Grid</div>
+            <div class="metric-row"><span>Platelet Aggregation Inhibition Rate:</span><span id="platelet_res" style="font-family:monospace;">--</span></div>
+            <div class="metric-row"><span>Fibrinolytic Plaque Dissolution Ingestion Index:</span><span id="fibrin_res" style="font-family:monospace;">--</span></div>
+            <div class="metric-row"><span>Arterial Endothelial Wall Integrity Matrix:</span><span id="wall_res" style="font-family:monospace;">--</span></div>
+            <div class="metric-row"><span>Capillary Fragility Mitigation Index:</span><span id="fragility_res" style="font-family:monospace;">--</span></div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function updateVal(id, val) { document.getElementById(id).innerText = val; }
+
+    function toggleFormulationFields() {
+        const targetClass = document.getElementById('classSelector').value;
+        const isNeuro = targetClass === 'neuro-sleep';
+        const isCardio = targetClass === 'cardio-stroke';
+        const isOnco = targetClass === 'comp-oncology';
+        const isTissue = targetClass === 'tissue-regeneration';
+
+        document.getElementById('neuro-fields').style.display = isNeuro ? 'block' : 'none';
+        document.getElementById('cardio-fields').style.display = isCardio ? 'block' : 'none';
+        document.getElementById('onco-fields').style.display = isOnco ? 'block' : 'none';
+        document.getElementById('tissue-fields').style.display = isTissue ? 'block' : 'none';
+
+        document.getElementById('out-neuro-section').style.display = isNeuro ? 'block' : 'none';
+        document.getElementById('out-cardio-section').style.display = !isNeuro ? 'block' : 'none';
+        executeUnifiedSimulation();
+    }
+
+    function calculateLocalSimulation(selectedClass, p) {
+        if (selectedClass === 'neuro-sleep') {
+            const hyp = p.allopathic_hypnotic_mg || 0;
+            const asava = p.asava_carrier_ml || 0;
+            const ashwa = p.ashwagandha_mg || 0;
+            const snayu = p.snayu_stimulants_mg || 0;
+            const bp = p.bp_modulators_mg || 0;
+
+            const bioMult = 1.0 + (0.50 * asava) / (asava + 1.5);
+            const cypStress = Math.max(0.0, minVal(100.0, (4.5 * hyp * bioMult) - (12.0 * Math.log1p(ashwa))));
+            const snayuTone = 1.0 - Math.exp(-(0.03 * snayu * bioMult));
+            const bpStability = Math.max(0.0, minVal(100.0, 100.0 - Math.abs(120.0 - (bp * 2.4))));
+
+            let status = "APPROVED";
+            if (cypStress > 85.0 || snayuTone > 0.95) status = "CRITICAL_TOXICITY";
+            else if (cypStress > 60.0) status = "WARNING_HIGH_ACCUMULATION";
+
+            return {
+                cross_interaction_validator: { safety_clearance_status: status },
+                simulation_pathways: {
+                    neuro_and_snayu_vector: {
+                        gaba_receptor_binding_rate: (0.12 * hyp * bioMult).toFixed(2),
+                        snayu_active_stage_stimulation_index: snayuTone.toFixed(2),
+                        cortisol_suppression_velocity: (ashwa * 0.015).toFixed(2)
+                    },
+                    vascular_hemodynamic_matrix: {
+                        blood_pressure_stability_score: bpStability.toFixed(1)
+                    },
+                    hepato_pancreatic_axis: {
+                        cytochrome_p450_stress_score: cypStress.toFixed(1),
+                        nocturnal_glucose_stability_score: (90.0 + (ashwa * 0.02)).toFixed(1)
+                    }
+                }
+            };
+        } else if (selectedClass === 'cardio-stroke') {
+            const antiplatelet = p.allopathic_antiplatelet_level || 0;
+            const arjuna = p.arjuna_extract_level || 0;
+            const guggulu = p.guggulu_purified_level || 0;
+
+            const platelet = minVal(0.98, (antiplatelet * 0.012) + (guggulu * 0.0004));
+            const wall = Math.max(0.0, minVal(100.0, 100.0 - (antiplatelet * 0.8) + (arjuna * 0.08)));
+
+            let status = "APPROVED";
+            if (platelet > 0.95 && wall < 45) status = "CRITICAL_HEMORRHAGE_RISK";
+            else if (wall < 60) status = "WARNING_VASCULAR_FRAGILITY";
+
+            return {
+                cross_interaction_validator: { safety_clearance_status: status },
+                simulation_pathways: {
+                    hematological_vector: {
+                        platelet_aggregation_inhibition_rate: platelet,
+                        fibrinolytic_clot_dissolution_index: (guggulu * 0.001).toFixed(2)
+                    },
+                    vascular_endothelial_matrix: {
+                        arterial_wall_integrity_score: wall.toFixed(1),
+                        capillary_fragility_mitigation_index: (arjuna * 0.09).toFixed(1)
+                    }
+                }
+            };
+        } else if (selectedClass === 'comp-oncology') {
+            const chemo = p.allopathic_chemo_intensity || 0;
+            const apoptosis = p.apoptosis_herbal_intensity || 0;
+            const cyto = p.cytoprotective_factor || 0;
+
+            const tumor = minVal(0.99, (chemo * 0.015) + (apoptosis * 0.0005));
+            const survival = Math.max(0.0, minVal(100.0, 100.0 - (chemo * 1.2) + (cyto * 0.15)));
+
+            let status = "APPROVED";
+            if (tumor > 0.90 && survival < 40.0) status = "CRITICAL_BONE_MARROW_SUPPRESSION";
+            else if (survival < 60.0) status = "WARNING_SYSTEMIC_TOXICITY";
+
+            return {
+                cross_interaction_validator: { safety_clearance_status: status },
+                simulation_pathways: {
+                    oncology_tumor_kinetics: {
+                        tumor_angiogenesis_inhibition_velocity: tumor,
+                        cellular_apoptosis_induction_rate: (apoptosis * 0.01).toFixed(2)
+                    },
+                    healthy_tissue_cytoprotection: {
+                        non_tumor_cellular_integrity_score: survival.toFixed(1),
+                        free_radical_scavenging_reserve: (cyto * 0.08).toFixed(1)
+                    }
+                }
+            };
+        } else {
+            const peptide = p.allopathic_growth_peptide_mg || 0;
+            const manjistha = p.manjistha_extract_potency || 0;
+            const shilajit = p.shilajit_mineral_delivery || 0;
+
+            const healing = minVal(0.99, (peptide * 0.02) + (shilajit * 0.0005));
+            const scar = Math.max(0.0, minVal(100.0, 100.0 - (peptide * 1.5) + (manjistha * 0.18)));
+
+            let status = "APPROVED";
+            if (healing > 0.92 && scar < 40.0) status = "CRITICAL_HYPERTROPHIC_SCARRING_RISK";
+            else if (scar < 60.0) status = "WARNING_UNCONTROLLED_CELLULAR_PROLIFERATION";
+
+            return {
+                cross_interaction_validator: { safety_clearance_status: status },
+                simulation_pathways: {
+                    regeneration_vector: {
+                        mitotic_cellular_replication_rate: healing,
+                        extracellular_matrix_deposition_velocity: (shilajit * 0.003).toFixed(2)
+                    },
+                    structural_tissue_matrix: {
+                        scar_tissue_mitigation_index: scar.toFixed(1),
+                        collagen_cross_linking_efficiency: (manjistha * 0.07).toFixed(1)
+                    }
+                }
+            };
+        }
+    }
+
+    function minVal(a, b) { return a < b ? a : b; }
+
+    async function executeUnifiedSimulation() {
+        const selectedClass = document.getElementById('classSelector').value;
+        
+        let formulationParameters = {};
+        if (selectedClass === 'neuro-sleep') {
+            formulationParameters = {
+                allopathic_hypnotic_mg: parseFloat(document.getElementById('hypnotic').value),
+                asava_carrier_ml: parseFloat(document.getElementById('asava').value),
+                ashwagandha_mg: parseFloat(document.getElementById('ashwagandha').value),
+                snayu_stimulants_mg: parseFloat(document.getElementById('snayu').value),
+                bp_modulators_mg: parseFloat(document.getElementById('bp').value)
+            };
+        } else if (selectedClass === 'cardio-stroke') {
+            formulationParameters = {
+                allopathic_antiplatelet_level: parseFloat(document.getElementById('antiplatelet').value),
+                arjuna_extract_level: parseFloat(document.getElementById('arjuna').value),
+                guggulu_purified_level: parseFloat(document.getElementById('guggulu').value)
+            };
+        } else if (selectedClass === 'comp-oncology') {
+            formulationParameters = {
+                allopathic_chemo_intensity: parseFloat(document.getElementById('chemo').value),
+                apoptosis_herbal_intensity: parseFloat(document.getElementById('apoptosis').value),
+                cytoprotective_factor: parseFloat(document.getElementById('cytoprotective').value)
+            };
+        } else if (selectedClass === 'tissue-regeneration') {
+            formulationParameters = {
+                allopathic_growth_peptide_mg: parseFloat(document.getElementById('peptide').value),
+                manjistha_extract_potency: parseFloat(document.getElementById('manjistha').value),
+                shilajit_mineral_delivery: parseFloat(document.getElementById('shilajit').value)
+            };
+        }
+
+        const payload = { codename: "DYNAMIC-RUN-CORE", parameters: formulationParameters };
+        let data = null;
+
+        try {
+            const response = await fetch(`http://127.0.0.1:8000/api/v3/simulate/${selectedClass}`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload)
+            });
+            if (response.ok) {
+                data = await response.json();
+            } else {
+                data = calculateLocalSimulation(selectedClass, formulationParameters);
+            }
+        } catch (error) {
+            data = calculateLocalSimulation(selectedClass, formulationParameters);
+        }
+
+        const safetyStatus = data.cross_interaction_validator.safety_clearance_status;
+        document.getElementById('badge').className = `status-badge ${safetyStatus}`;
+        document.getElementById('badge').innerText = safetyStatus.replace(/_/g, ' ');
+        document.getElementById('metric-label').innerText = `Class: ${selectedClass.toUpperCase()}`;
+
+        if (selectedClass === 'neuro-sleep') {
+            const ns = data.simulation_pathways.neuro_and_snayu_vector;
+            const v = data.simulation_pathways.vascular_hemodynamic_matrix;
+            const hp = data.simulation_pathways.hepato_pancreatic_axis;
+            document.getElementById('gaba_res').innerText = `${ns.gaba_receptor_binding_rate} units/sec`;
+            document.getElementById('snayu_res').innerText = `${ns.snayu_active_stage_stimulation_index} / 1.00`;
+            document.getElementById('cortisol_res').innerText = `-${ns.cortisol_suppression_velocity} score`;
+            document.getElementById('bp_res').innerText = `${v.blood_pressure_stability_score}% Constancy`;
+            document.getElementById('cyp_res').innerText = `${hp.cytochrome_p450_stress_score} Index`;
+            document.getElementById('glucose_res').innerText = `${hp.nocturnal_glucose_stability_score}% Optimum`;
+        } else if (selectedClass === 'cardio-stroke') {
+            const h = data.simulation_pathways.hematological_vector;
+            const ve = data.simulation_pathways.vascular_endothelial_matrix;
+            document.getElementById('platelet_res').innerText = `${(Number(h.platelet_aggregation_inhibition_rate) * 100).toFixed(0)}% Protected`;
+            document.getElementById('fibrin_res').innerText = `${h.fibrinolytic_clot_dissolution_index} Velocity`;
+            document.getElementById('wall_res').innerText = `${ve.arterial_wall_integrity_score} / 100 Structural`;
+            document.getElementById('fragility_res').innerText = `${ve.capillary_fragility_mitigation_index} Matrix`;
+        } else if (selectedClass === 'comp-oncology') {
+            const onk = data.simulation_pathways.oncology_tumor_kinetics;
+            const cyt = data.simulation_pathways.healthy_tissue_cytoprotection;
+            document.getElementById('platelet_res').innerText = `${(Number(onk.tumor_angiogenesis_inhibition_velocity) * 100).toFixed(0)}% Angiogenesis Inhibition`;
+            document.getElementById('fibrin_res').innerText = `${onk.cellular_apoptosis_induction_rate} Apoptosis Rate`;
+            document.getElementById('wall_res').innerText = `${cyt.non_tumor_cellular_integrity_score} / 100 Healthy Survival`;
+            document.getElementById('fragility_res').innerText = `${cyt.free_radical_scavenging_reserve} Scavenging Reserve`;
+        } else if (selectedClass === 'tissue-regeneration') {
+            const r = data.simulation_pathways.regeneration_vector;
+            const st = data.simulation_pathways.structural_tissue_matrix;
+            document.getElementById('platelet_res').innerText = `${(r.mitotic_cellular_replication_rate * 100).toFixed(0)}% Mitotic Velocity`;
+            document.getElementById('fibrin_res').innerText = `${r.extracellular_matrix_deposition_velocity} Deposition Flux`;
+            document.getElementById('wall_res').innerText = `${st.scar_tissue_mitigation_index} / 100 Scar Mitigation`;
+            document.getElementById('fragility_res').innerText = `${st.collagen_cross_linking_efficiency} Crosslink Score`;
+        }
+    }
+
+    // Run initial simulation
+    executeUnifiedSimulation();
+</script>
+
+</body>
+</html>

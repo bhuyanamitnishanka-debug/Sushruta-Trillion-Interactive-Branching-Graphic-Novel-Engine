@@ -1,0 +1,43 @@
+name: Sushruta-Trillion CI/CD Continuous Integration Pipeline
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+jobs:
+  build-and-test:
+    name: Execute Automated Build and Chemical Boundary Tests
+    runs-on: ubuntu-latest
+
+    services:
+      # Optional: Can attach local cache or broker database containers here if needed later
+    
+    steps:
+    # Step 1: Check out code from GitHub active branch
+    - name: Checkout Code Repository
+      uses: actions/checkout@v4
+
+    # Step 2: Establish isolated production Python environment
+    - name: Set up Python 3.10 Runtime Environment
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.10'
+        cache: 'pip' # Automatically caches packages to speed up consecutive pipeline workflows
+
+    # Step 3: Ingest application requirements safely
+    - name: Install Project System Dependencies
+      run: |
+        python -m pip install --upgrade pip
+        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+        pip install httpx pytest  # Ingests necessary validation/testing packages
+
+    # Step 4: Execute full analytical processing validation checks
+    - name: Run 100-Iteration High-Throughput Diagnostic Batch Tester
+      run: |
+        # Launches your automated batch simulation loops to confirm structural safety integrity gates
+        python -m tests.batch_tester
+
+    # Step 5: Verify syntax integrity and module initialization checks
+    - name: Validate System Core Compilation
+      run: |
+        python -c "import main; print('Backend microservice compiles successfully.')"

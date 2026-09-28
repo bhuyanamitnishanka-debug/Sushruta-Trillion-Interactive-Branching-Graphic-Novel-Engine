@@ -1,0 +1,1359 @@
+{
+  "metadata": {
+    "created_at": "2026-09-28 21:40:00.000000",
+    "generated_by": "Automated Engine Mock Setup",
+    "portfolio_verification_status": "AUTHENTICATED",
+    "total_records": 50
+  },
+  "records": [
+    {
+      "class_executed": "neuro-sleep",
+      "formulation_metadata": {
+        "codename": "MOCK-RUN-01",
+        "vessel": "Vascular-Synchronized Core"
+      },
+      "simulation_pathways": {
+        "neuro_and_snayu_vector": {
+          "gaba_receptor_binding_rate": 3.33,
+          "snayu_active_stage_stimulation_index": 0.71,
+          "cortisol_suppression_velocity": 3.84
+        },
+        "vascular_hemodynamic_matrix": {
+          "blood_pressure_stability_score": 70.7,
+          "nocturnal_hypotensive_crash_prevention_index": 67.2
+        },
+        "hepato_pancreatic_axis": {
+          "cytochrome_p450_stress_score": 58.3,
+          "nocturnal_glucose_stability_score": 95.1
+        }
+      },
+      "cross_interaction_validator": {
+        "bioavailability_amplification_multiplier": 1.38,
+        "safety_clearance_status": "APPROVED"
+      }
+    },
+    {
+      "class_executed": "cardio-stroke",
+      "formulation_metadata": {
+        "codename": "MOCK-RUN-02",
+        "vessel": "Dual-Chamber Antithrombotic Tablet"
+      },
+      "simulation_pathways": {
+        "hematological_vector": {
+          "platelet_aggregation_inhibition_rate": 0.54,
+          "fibrinolytic_clot_dissolution_index": 0.28
+        },
+        "vascular_endothelial_matrix": {
+          "arterial_wall_integrity_score": 85.3,
+          "capillary_fragility_mitigation_index": 31.8
+        }
+      },
+      "cross_interaction_validator": {
+        "haemostatic_interference_detected": false,
+        "safety_clearance_status": "APPROVED"
+      }
+    },
+    {
+      "class_executed": "neuro-sleep",
+      "formulation_metadata": {
+        "codename": "MOCK-RUN-03",
+        "vessel": "Vascular-Synchronized Core"
+      },
+      "simulation_pathways": {
+        "neuro_and_snayu_vector": {
+          "gaba_receptor_binding_rate": 4.12,
+          "snayu_active_stage_stimulation_index": 0.89,
+          "cortisol_suppression_velocity": 7.2
+        },
+        "vascular_hemodynamic_matrix": {
+          "blood_pressure_stability_score": 34.0,
+          "nocturnal_hypotensive_crash_prevention_index": 32.3
+        },
+        "hepato_pancreatic_axis": {
+          "cytochrome_p450_stress_score": 92.4,
+          "nocturnal_glucose_stability_score": 98.4
+        }
+      },
+      "cross_interaction_validator": {
+        "bioavailability_amplification_multiplier": 1.45,
+        "safety_clearance_status": "CRITICAL_TOXICITY"
+      }
+    },
+    {
+      "class_executed": "cardio-stroke",
+      "formulation_metadata": {
+        "codename": "MOCK-RUN-04",
+        "vessel": "Dual-Chamber Antithrombotic Tablet"
+      },
+      "simulation_pathways": {
+        "hematological_vector": {
+          "platelet_aggregation_inhibition_rate": 0.98,
+          "fibrinolytic_clot_dissolution_index": 0.05
+        },
+        "vascular_endothelial_matrix": {
+          "arterial_wall_integrity_score": 32.4,
+          "capillary_fragility_mitigation_index": 18.0
+        }
+      },
+      "cross_interaction_validator": {
+        "haemostatic_interference_detected": true,
+        "safety_clearance_status": "CRITICAL_HEMORRHAGE_RISK"
+      }
+    },
+    {
+      "class_executed": "neuro-sleep",
+      "formulation_metadata": {
+        "codename": "MOCK-RUN-05",
+        "vessel": "Vascular-Synchronized Core"
+      },
+      "simulation_pathways": {
+        "neuro_and_snayu_vector": {
+          "gaba_receptor_binding_rate": 1.15,
+          "snayu_active_stage_stimulation_index": 0.32,
+          "cortisol_suppression_velocity": 4.5
+        },
+        "vascular_hemodynamic_matrix": {
+          "blood_pressure_stability_score": 92.0,
+          "nocturnal_hypotensive_crash_prevention_index": 87.4
+        },
+        "hepato_pancreatic_axis": {
+          "cytochrome_p450_stress_score": 24.5,
+          "nocturnal_glucose_stability_score": 96.0
+        }
+      },
+      "cross_interaction_validator": {
+        "bioavailability_amplification_multiplier": 1.21,
+        "safety_clearance_status": "APPROVED"
+      }
+    },
+    {
+      "class_executed": "cardio-stroke",
+      "formulation_metadata": {
+        "codename": "MOCK-RUN-06",
+        "vessel": "Dual-Chamber Antithrombotic Tablet"
+      },
+      "simulation_pathways": {
+        "hematological_vector": {
+          "platelet_aggregation_inhibition_rate": 0.74,
+          "fibrinolytic_clot_dissolution_index": 0.18
+        },
+        "vascular_endothelial_matrix": {
+          "arterial_wall_integrity_score": 74.2,
+          "capillary_fragility_mitigation_index": 42.5
+        }
+      },
+      "cross_interaction_validator": {
+        "haemostatic_interference_detected": false,
+        "safety_clearance_status": "APPROVED"
+      }
+    },
+    {
+      "class_executed": "neuro-sleep",
+      "formulation_metadata": {
+        "codename": "MOCK-RUN-07",
+        "vessel": "Vascular-Synchronized Core"
+      },
+      "simulation_pathways": {
+        "neuro_and_snayu_vector": {
+          "gaba_receptor_binding_rate": 2.8,
+          "snayu_active_stage_stimulation_index": 0.65,
+          "cortisol_suppression_velocity": 5.1
+        },
+        "vascular_hemodynamic_matrix": {
+          "blood_pressure_stability_score": 81.2,
+          "nocturnal_hypotensive_crash_prevention_index": 77.1
+        },
+        "hepato_pancreatic_axis": {
+          "cytochrome_p450_stress_score": 68.4,
+          "nocturnal_glucose_stability_score": 96.8
+        }
+      },
+      "cross_interaction_validator": {
+        "bioavailability_amplification_multiplier": 1.32,
+        "safety_clearance_status": "WARNING_HIGH_ACCUMULATION"
+      }
+    },
+    {
+      "class_executed": "cardio-stroke",
+      "formulation_metadata": {
+        "codename": "MOCK-RUN-08",
+        "vessel": "Dual-Chamber Antithrombotic Tablet"
+      },
+      "simulation_pathways": {
+        "hematological_vector": {
+          "platelet_aggregation_inhibition_rate": 0.94,
+          "fibrinolytic_clot_dissolution_index": 0.12
+        },
+        "vascular_endothelial_matrix": {
+          "arterial_wall_integrity_score": 54.0,
+          "capillary_fragility_mitigation_index": 52.0
+        }
+      },
+      "cross_interaction_validator": {
+        "haemostatic_interference_detected": false,
+        "safety_clearance_status": "WARNING_VASCULAR_FRAGILITY"
+      }
+    },
+    {
+      "class_executed": "cardio-stroke",
+      "formulation_metadata": {
+        "codename": "MOCK-RUN-09",
+        "vessel": "Dual-Chamber Antithrombotic Tablet"
+      },
+      "simulation_pathways": {
+        "hematological_vector": {
+          "platelet_aggregation_inhibition_rate": 0.94,
+          "fibrinolytic_clot_dissolution_index": 0.29
+        },
+        "vascular_endothelial_matrix": {
+          "arterial_wall_integrity_score": 70.5,
+          "capillary_fragility_mitigation_index": 28.5
+        }
+      },
+      "cross_interaction_validator": {
+        "haemostatic_interference_detected": false,
+        "safety_clearance_status": "APPROVED"
+      },
+      "saved_at": "2026-09-28 16:19:20.523552"
+    },
+    {
+      "class_executed": "neuro-sleep",
+      "formulation_metadata": {
+        "codename": "MOCK-RUN-10",
+        "vessel": "Vascular-Synchronized Core"
+      },
+      "simulation_pathways": {
+        "neuro_and_snayu_vector": {
+          "gaba_receptor_binding_rate": 4.44,
+          "snayu_active_stage_stimulation_index": 0.69,
+          "cortisol_suppression_velocity": 6.48
+        },
+        "vascular_hemodynamic_matrix": {
+          "blood_pressure_stability_score": 70.5,
+          "nocturnal_hypotensive_crash_prevention_index": 67.0
+        },
+        "hepato_pancreatic_axis": {
+          "cytochrome_p450_stress_score": 93.7,
+          "nocturnal_glucose_stability_score": 98.6
+        }
+      },
+      "cross_interaction_validator": {
+        "bioavailability_amplification_multiplier": 1.32,
+        "safety_clearance_status": "CRITICAL_TOXICITY"
+      },
+      "saved_at": "2026-09-28 16:19:20.523605"
+    },
+    {
+      "class_executed": "cardio-stroke",
+      "formulation_metadata": {
+        "codename": "MOCK-RUN-11",
+        "vessel": "Dual-Chamber Antithrombotic Tablet"
+      },
+      "simulation_pathways": {
+        "hematological_vector": {
+          "platelet_aggregation_inhibition_rate": 0.6,
+          "fibrinolytic_clot_dissolution_index": 0.1
+        },
+        "vascular_endothelial_matrix": {
+          "arterial_wall_integrity_score": 100.0,
+          "capillary_fragility_mitigation_index": 55.4
+        }
+      },
+      "cross_interaction_validator": {
+        "haemostatic_interference_detected": false,
+        "safety_clearance_status": "APPROVED"
+      },
+      "saved_at": "2026-09-28 16:19:20.523617"
+    },
+    {
+      "class_executed": "neuro-sleep",
+      "formulation_metadata": {
+        "codename": "MOCK-RUN-12",
+        "vessel": "Vascular-Synchronized Core"
+      },
+      "simulation_pathways": {
+        "neuro_and_snayu_vector": {
+          "gaba_receptor_binding_rate": 4.13,
+          "snayu_active_stage_stimulation_index": 0.47,
+          "cortisol_suppression_velocity": 2.95
+        },
+        "vascular_hemodynamic_matrix": {
+          "blood_pressure_stability_score": 24.2,
+          "nocturnal_hypotensive_crash_prevention_index": 23.0
+        },
+        "hepato_pancreatic_axis": {
+          "cytochrome_p450_stress_score": 91.3,
+          "nocturnal_glucose_stability_score": 93.9
+        }
+      },
+      "cross_interaction_validator": {
+        "bioavailability_amplification_multiplier": 1.17,
+        "safety_clearance_status": "CRITICAL_TOXICITY"
+      },
+      "saved_at": "2026-09-28 16:19:20.523640"
+    },
+    {
+      "class_executed": "cardio-stroke",
+      "formulation_metadata": {
+        "codename": "MOCK-RUN-13",
+        "vessel": "Dual-Chamber Antithrombotic Tablet"
+      },
+      "simulation_pathways": {
+        "hematological_vector": {
+          "platelet_aggregation_inhibition_rate": 0.68,
+          "fibrinolytic_clot_dissolution_index": 0.13
+        },
+        "vascular_endothelial_matrix": {
+          "arterial_wall_integrity_score": 96.6,
+          "capillary_fragility_mitigation_index": 43.5
+        }
+      },
+      "cross_interaction_validator": {
+        "haemostatic_interference_detected": false,
+        "safety_clearance_status": "APPROVED"
+      },
+      "saved_at": "2026-09-28 16:19:20.523653"
+    },
+    {
+      "class_executed": "neuro-sleep",
+      "formulation_metadata": {
+        "codename": "MOCK-RUN-14",
+        "vessel": "Vascular-Synchronized Core"
+      },
+      "simulation_pathways": {
+        "neuro_and_snayu_vector": {
+          "gaba_receptor_binding_rate": 3.27,
+          "snayu_active_stage_stimulation_index": 0.85,
+          "cortisol_suppression_velocity": 3.06
+        },
+        "vascular_hemodynamic_matrix": {
+          "blood_pressure_stability_score": 86.3,
+          "nocturnal_hypotensive_crash_prevention_index": 82.0
+        },
+        "hepato_pancreatic_axis": {
+          "cytochrome_p450_stress_score": 58.6,
+          "nocturnal_glucose_stability_score": 94.1
+        }
+      },
+      "cross_interaction_validator": {
+        "bioavailability_amplification_multiplier": 1.3,
+        "safety_clearance_status": "APPROVED"
+      },
+      "saved_at": "2026-09-28 16:19:20.523675"
+    },
+    {
+      "class_executed": "cardio-stroke",
+      "formulation_metadata": {
+        "codename": "MOCK-RUN-15",
+        "vessel": "Dual-Chamber Antithrombotic Tablet"
+      },
+      "simulation_pathways": {
+        "hematological_vector": {
+          "platelet_aggregation_inhibition_rate": 0.49,
+          "fibrinolytic_clot_dissolution_index": 0.22
+        },
+        "vascular_endothelial_matrix": {
+          "arterial_wall_integrity_score": 100.0,
+          "capillary_fragility_mitigation_index": 62.5
+        }
+      },
+      "cross_interaction_validator": {
+        "haemostatic_interference_detected": false,
+        "safety_clearance_status": "APPROVED"
+      },
+      "saved_at": "2026-09-28 16:19:20.523686"
+    },
+    {
+      "class_executed": "neuro-sleep",
+      "formulation_metadata": {
+        "codename": "MOCK-RUN-16",
+        "vessel": "Vascular-Synchronized Core"
+      },
+      "simulation_pathways": {
+        "neuro_and_snayu_vector": {
+          "gaba_receptor_binding_rate": 3.56,
+          "snayu_active_stage_stimulation_index": 0.84,
+          "cortisol_suppression_velocity": 4.46
+        },
+        "vascular_hemodynamic_matrix": {
+          "blood_pressure_stability_score": 90.9,
+          "nocturnal_hypotensive_crash_prevention_index": 86.3
+        },
+        "hepato_pancreatic_axis": {
+          "cytochrome_p450_stress_score": 65.3,
+          "nocturnal_glucose_stability_score": 95.9
+        }
+      },
+      "cross_interaction_validator": {
+        "bioavailability_amplification_multiplier": 1.38,
+        "safety_clearance_status": "WARNING_HIGH_ACCUMULATION"
+      },
+      "saved_at": "2026-09-28 16:19:20.523707"
+    },
+    {
+      "class_executed": "cardio-stroke",
+      "formulation_metadata": {
+        "codename": "MOCK-RUN-17",
+        "vessel": "Dual-Chamber Antithrombotic Tablet"
+      },
+      "simulation_pathways": {
+        "hematological_vector": {
+          "platelet_aggregation_inhibition_rate": 0.68,
+          "fibrinolytic_clot_dissolution_index": 0.05
+        },
+        "vascular_endothelial_matrix": {
+          "arterial_wall_integrity_score": 100.0,
+          "capillary_fragility_mitigation_index": 54.1
+        }
+      },
+      "cross_interaction_validator": {
+        "haemostatic_interference_detected": false,
+        "safety_clearance_status": "APPROVED"
+      },
+      "saved_at": "2026-09-28 16:19:20.523718"
+    },
+    {
+      "class_executed": "neuro-sleep",
+      "formulation_metadata": {
+        "codename": "MOCK-RUN-18",
+        "vessel": "Vascular-Synchronized Core"
+      },
+      "simulation_pathways": {
+        "neuro_and_snayu_vector": {
+          "gaba_receptor_binding_rate": 2.65,
+          "snayu_active_stage_stimulation_index": 0.38,
+          "cortisol_suppression_velocity": 4.09
+        },
+        "vascular_hemodynamic_matrix": {
+          "blood_pressure_stability_score": 36.6,
+          "nocturnal_hypotensive_crash_prevention_index": 34.8
+        },
+        "hepato_pancreatic_axis": {
+          "cytochrome_p450_stress_score": 32.0,
+          "nocturnal_glucose_stability_score": 95.5
+        }
+      },
+      "cross_interaction_validator": {
+        "bioavailability_amplification_multiplier": 1.33,
+        "safety_clearance_status": "APPROVED"
+      },
+      "saved_at": "2026-09-28 16:19:20.523732"
+    },
+    {
+      "class_executed": "cardio-stroke",
+      "formulation_metadata": {
+        "codename": "MOCK-RUN-19",
+        "vessel": "Dual-Chamber Antithrombotic Tablet"
+      },
+      "simulation_pathways": {
+        "hematological_vector": {
+          "platelet_aggregation_inhibition_rate": 0.34,
+          "fibrinolytic_clot_dissolution_index": 0.09
+        },
+        "vascular_endothelial_matrix": {
+          "arterial_wall_integrity_score": 100.0,
+          "capillary_fragility_mitigation_index": 48.5
+        }
+      },
+      "cross_interaction_validator": {
+        "haemostatic_interference_detected": false,
+        "safety_clearance_status": "APPROVED"
+      },
+      "saved_at": "2026-09-28 16:19:20.523745"
+    },
+    {
+      "class_executed": "neuro-sleep",
+      "formulation_metadata": {
+        "codename": "MOCK-RUN-20",
+        "vessel": "Vascular-Synchronized Core"
+      },
+      "simulation_pathways": {
+        "neuro_and_snayu_vector": {
+          "gaba_receptor_binding_rate": 0.87,
+          "snayu_active_stage_stimulation_index": 0.58,
+          "cortisol_suppression_velocity": 1.99
+        },
+        "vascular_hemodynamic_matrix": {
+          "blood_pressure_stability_score": 40.5,
+          "nocturnal_hypotensive_crash_prevention_index": 38.5
+        },
+        "hepato_pancreatic_axis": {
+          "cytochrome_p450_stress_score": 0.0,
+          "nocturnal_glucose_stability_score": 92.7
+        }
+      },
+      "cross_interaction_validator": {
+        "bioavailability_amplification_multiplier": 1.23,
+        "safety_clearance_status": "APPROVED"
+      },
+      "saved_at": "2026-09-28 16:19:20.523767"
+    },
+    {
+      "class_executed": "cardio-stroke",
+      "formulation_metadata": {
+        "codename": "MOCK-RUN-21",
+        "vessel": "Dual-Chamber Antithrombotic Tablet"
+      },
+      "simulation_pathways": {
+        "hematological_vector": {
+          "platelet_aggregation_inhibition_rate": 0.98,
+          "fibrinolytic_clot_dissolution_index": 0.21
+        },
+        "vascular_endothelial_matrix": {
+          "arterial_wall_integrity_score": 69.7,
+          "capillary_fragility_mitigation_index": 37.6
+        }
+      },
+      "cross_interaction_validator": {
+        "haemostatic_interference_detected": false,
+        "safety_clearance_status": "APPROVED"
+      },
+      "saved_at": "2026-09-28 16:19:20.523777"
+    },
+    {
+      "class_executed": "neuro-sleep",
+      "formulation_metadata": {
+        "codename": "MOCK-RUN-22",
+        "vessel": "Vascular-Synchronized Core"
+      },
+      "simulation_pathways": {
+        "neuro_and_snayu_vector": {
+          "gaba_receptor_binding_rate": 2.68,
+          "snayu_active_stage_stimulation_index": 0.78,
+          "cortisol_suppression_velocity": 8.07
+        },
+        "vascular_hemodynamic_matrix": {
+          "blood_pressure_stability_score": 5.0,
+          "nocturnal_hypotensive_crash_prevention_index": 4.7
+        },
+        "hepato_pancreatic_axis": {
+          "cytochrome_p450_stress_score": 25.0,
+          "nocturnal_glucose_stability_score": 100.8
+        }
+      },
+      "cross_interaction_validator": {
+        "bioavailability_amplification_multiplier": 1.32,
+        "safety_clearance_status": "APPROVED"
+      },
+      "saved_at": "2026-09-28 16:19:20.523790"
+    },
+    {
+      "class_executed": "cardio-stroke",
+      "formulation_metadata": {
+        "codename": "MOCK-RUN-23",
+        "vessel": "Dual-Chamber Antithrombotic Tablet"
+      },
+      "simulation_pathways": {
+        "hematological_vector": {
+          "platelet_aggregation_inhibition_rate": 0.94,
+          "fibrinolytic_clot_dissolution_index": 0.05
+        },
+        "vascular_endothelial_matrix": {
+          "arterial_wall_integrity_score": 87.4,
+          "capillary_fragility_mitigation_index": 54.9
+        }
+      },
+      "cross_interaction_validator": {
+        "haemostatic_interference_detected": false,
+        "safety_clearance_status": "APPROVED"
+      },
+      "saved_at": "2026-09-28 16:19:20.523805"
+    },
+    {
+      "class_executed": "neuro-sleep",
+      "formulation_metadata": {
+        "codename": "MOCK-RUN-24",
+        "vessel": "Vascular-Synchronized Core"
+      },
+      "simulation_pathways": {
+        "neuro_and_snayu_vector": {
+          "gaba_receptor_binding_rate": 0.97,
+          "snayu_active_stage_stimulation_index": 0.96,
+          "cortisol_suppression_velocity": 4.09
+        },
+        "vascular_hemodynamic_matrix": {
+          "blood_pressure_stability_score": 3.8,
+          "nocturnal_hypotensive_crash_prevention_index": 3.6
+        },
+        "hepato_pancreatic_axis": {
+          "cytochrome_p450_stress_score": 0.0,
+          "nocturnal_glucose_stability_score": 95.5
+        }
+      },
+      "cross_interaction_validator": {
+        "bioavailability_amplification_multiplier": 1.14,
+        "safety_clearance_status": "CRITICAL_TOXICITY"
+      },
+      "saved_at": "2026-09-28 16:19:20.523821"
+    },
+    {
+      "class_executed": "cardio-stroke",
+      "formulation_metadata": {
+        "codename": "MOCK-RUN-25",
+        "vessel": "Dual-Chamber Antithrombotic Tablet"
+      },
+      "simulation_pathways": {
+        "hematological_vector": {
+          "platelet_aggregation_inhibition_rate": 0.98,
+          "fibrinolytic_clot_dissolution_index": 0.23
+        },
+        "vascular_endothelial_matrix": {
+          "arterial_wall_integrity_score": 51.4,
+          "capillary_fragility_mitigation_index": 24.4
+        }
+      },
+      "cross_interaction_validator": {
+        "haemostatic_interference_detected": false,
+        "safety_clearance_status": "WARNING_VASCULAR_FRAGILITY"
+      },
+      "saved_at": "2026-09-28 16:19:20.523830"
+    },
+    {
+      "class_executed": "neuro-sleep",
+      "formulation_metadata": {
+        "codename": "MOCK-RUN-26",
+        "vessel": "Vascular-Synchronized Core"
+      },
+      "simulation_pathways": {
+        "neuro_and_snayu_vector": {
+          "gaba_receptor_binding_rate": 4.0,
+          "snayu_active_stage_stimulation_index": 0.6,
+          "cortisol_suppression_velocity": 7.44
+        },
+        "vascular_hemodynamic_matrix": {
+          "blood_pressure_stability_score": 62.3,
+          "nocturnal_hypotensive_crash_prevention_index": 59.2
+        },
+        "hepato_pancreatic_axis": {
+          "cytochrome_p450_stress_score": 75.5,
+          "nocturnal_glucose_stability_score": 99.9
+        }
+      },
+      "cross_interaction_validator": {
+        "bioavailability_amplification_multiplier": 1.37,
+        "safety_clearance_status": "WARNING_HIGH_ACCUMULATION"
+      },
+      "saved_at": "2026-09-28 16:19:20.523843"
+    },
+    {
+      "class_executed": "cardio-stroke",
+      "formulation_metadata": {
+        "codename": "MOCK-RUN-27",
+        "vessel": "Dual-Chamber Antithrombotic Tablet"
+      },
+      "simulation_pathways": {
+        "hematological_vector": {
+          "platelet_aggregation_inhibition_rate": 0.98,
+          "fibrinolytic_clot_dissolution_index": 0.27
+        },
+        "vascular_endothelial_matrix": {
+          "arterial_wall_integrity_score": 83.9,
+          "capillary_fragility_mitigation_index": 57.9
+        }
+      },
+      "cross_interaction_validator": {
+        "haemostatic_interference_detected": false,
+        "safety_clearance_status": "APPROVED"
+      },
+      "saved_at": "2026-09-28 16:19:20.523858"
+    },
+    {
+      "class_executed": "neuro-sleep",
+      "formulation_metadata": {
+        "codename": "MOCK-RUN-28",
+        "vessel": "Vascular-Synchronized Core"
+      },
+      "simulation_pathways": {
+        "neuro_and_snayu_vector": {
+          "gaba_receptor_binding_rate": 2.67,
+          "snayu_active_stage_stimulation_index": 0.98,
+          "cortisol_suppression_velocity": 2.55
+        },
+        "vascular_hemodynamic_matrix": {
+          "blood_pressure_stability_score": 2.1,
+          "nocturnal_hypotensive_crash_prevention_index": 2.0
+        },
+        "hepato_pancreatic_axis": {
+          "cytochrome_p450_stress_score": 38.6,
+          "nocturnal_glucose_stability_score": 93.4
+        }
+      },
+      "cross_interaction_validator": {
+        "bioavailability_amplification_multiplier": 1.38,
+        "safety_clearance_status": "CRITICAL_TOXICITY"
+      },
+      "saved_at": "2026-09-28 16:19:20.523879"
+    },
+    {
+      "class_executed": "cardio-stroke",
+      "formulation_metadata": {
+        "codename": "MOCK-RUN-29",
+        "vessel": "Dual-Chamber Antithrombotic Tablet"
+      },
+      "simulation_pathways": {
+        "hematological_vector": {
+          "platelet_aggregation_inhibition_rate": 0.68,
+          "fibrinolytic_clot_dissolution_index": 0.19
+        },
+        "vascular_endothelial_matrix": {
+          "arterial_wall_integrity_score": 79.0,
+          "capillary_fragility_mitigation_index": 21.6
+        }
+      },
+      "cross_interaction_validator": {
+        "haemostatic_interference_detected": false,
+        "safety_clearance_status": "APPROVED"
+      },
+      "saved_at": "2026-09-28 16:19:20.523889"
+    },
+    {
+      "class_executed": "neuro-sleep",
+      "formulation_metadata": {
+        "codename": "MOCK-RUN-30",
+        "vessel": "Vascular-Synchronized Core"
+      },
+      "simulation_pathways": {
+        "neuro_and_snayu_vector": {
+          "gaba_receptor_binding_rate": 3.44,
+          "snayu_active_stage_stimulation_index": 0.74,
+          "cortisol_suppression_velocity": 1.93
+        },
+        "vascular_hemodynamic_matrix": {
+          "blood_pressure_stability_score": 13.6,
+          "nocturnal_hypotensive_crash_prevention_index": 12.9
+        },
+        "hepato_pancreatic_axis": {
+          "cytochrome_p450_stress_score": 70.7,
+          "nocturnal_glucose_stability_score": 92.6
+        }
+      },
+      "cross_interaction_validator": {
+        "bioavailability_amplification_multiplier": 1.29,
+        "safety_clearance_status": "WARNING_HIGH_ACCUMULATION"
+      },
+      "saved_at": "2026-09-28 16:19:20.523916"
+    },
+    {
+      "class_executed": "cardio-stroke",
+      "formulation_metadata": {
+        "codename": "MOCK-RUN-31",
+        "vessel": "Dual-Chamber Antithrombotic Tablet"
+      },
+      "simulation_pathways": {
+        "hematological_vector": {
+          "platelet_aggregation_inhibition_rate": 0.43,
+          "fibrinolytic_clot_dissolution_index": 0.11
+        },
+        "vascular_endothelial_matrix": {
+          "arterial_wall_integrity_score": 100.0,
+          "capillary_fragility_mitigation_index": 68.6
+        }
+      },
+      "cross_interaction_validator": {
+        "haemostatic_interference_detected": false,
+        "safety_clearance_status": "APPROVED"
+      },
+      "saved_at": "2026-09-28 16:19:20.523927"
+    },
+    {
+      "class_executed": "neuro-sleep",
+      "formulation_metadata": {
+        "codename": "MOCK-RUN-32",
+        "vessel": "Vascular-Synchronized Core"
+      },
+      "simulation_pathways": {
+        "neuro_and_snayu_vector": {
+          "gaba_receptor_binding_rate": 1.45,
+          "snayu_active_stage_stimulation_index": 0.96,
+          "cortisol_suppression_velocity": 8.86
+        },
+        "vascular_hemodynamic_matrix": {
+          "blood_pressure_stability_score": 89.2,
+          "nocturnal_hypotensive_crash_prevention_index": 84.7
+        },
+        "hepato_pancreatic_axis": {
+          "cytochrome_p450_stress_score": 0.0,
+          "nocturnal_glucose_stability_score": 101.8
+        }
+      },
+      "cross_interaction_validator": {
+        "bioavailability_amplification_multiplier": 1.2,
+        "safety_clearance_status": "CRITICAL_TOXICITY"
+      },
+      "saved_at": "2026-09-28 16:19:20.523941"
+    },
+    {
+      "class_executed": "cardio-stroke",
+      "formulation_metadata": {
+        "codename": "MOCK-RUN-33",
+        "vessel": "Dual-Chamber Antithrombotic Tablet"
+      },
+      "simulation_pathways": {
+        "hematological_vector": {
+          "platelet_aggregation_inhibition_rate": 0.5,
+          "fibrinolytic_clot_dissolution_index": 0.27
+        },
+        "vascular_endothelial_matrix": {
+          "arterial_wall_integrity_score": 100.0,
+          "capillary_fragility_mitigation_index": 53.3
+        }
+      },
+      "cross_interaction_validator": {
+        "haemostatic_interference_detected": false,
+        "safety_clearance_status": "APPROVED"
+      },
+      "saved_at": "2026-09-28 16:19:20.523950"
+    },
+    {
+      "class_executed": "neuro-sleep",
+      "formulation_metadata": {
+        "codename": "MOCK-RUN-34",
+        "vessel": "Vascular-Synchronized Core"
+      },
+      "simulation_pathways": {
+        "neuro_and_snayu_vector": {
+          "gaba_receptor_binding_rate": 0.85,
+          "snayu_active_stage_stimulation_index": 0.87,
+          "cortisol_suppression_velocity": 7.93
+        },
+        "vascular_hemodynamic_matrix": {
+          "blood_pressure_stability_score": 62.6,
+          "nocturnal_hypotensive_crash_prevention_index": 59.4
+        },
+        "hepato_pancreatic_axis": {
+          "cytochrome_p450_stress_score": 0.0,
+          "nocturnal_glucose_stability_score": 100.6
+        }
+      },
+      "cross_interaction_validator": {
+        "bioavailability_amplification_multiplier": 1.34,
+        "safety_clearance_status": "APPROVED"
+      },
+      "saved_at": "2026-09-28 16:19:20.523968"
+    },
+    {
+      "class_executed": "cardio-stroke",
+      "formulation_metadata": {
+        "codename": "MOCK-RUN-35",
+        "vessel": "Dual-Chamber Antithrombotic Tablet"
+      },
+      "simulation_pathways": {
+        "hematological_vector": {
+          "platelet_aggregation_inhibition_rate": 0.98,
+          "fibrinolytic_clot_dissolution_index": 0.12
+        },
+        "vascular_endothelial_matrix": {
+          "arterial_wall_integrity_score": 59.2,
+          "capillary_fragility_mitigation_index": 30.9
+        }
+      },
+      "cross_interaction_validator": {
+        "haemostatic_interference_detected": false,
+        "safety_clearance_status": "WARNING_VASCULAR_FRAGILITY"
+      },
+      "saved_at": "2026-09-28 16:19:20.523979"
+    },
+    {
+      "class_executed": "neuro-sleep",
+      "formulation_metadata": {
+        "codename": "MOCK-RUN-36",
+        "vessel": "Vascular-Synchronized Core"
+      },
+      "simulation_pathways": {
+        "neuro_and_snayu_vector": {
+          "gaba_receptor_binding_rate": 3.44,
+          "snayu_active_stage_stimulation_index": 0.8,
+          "cortisol_suppression_velocity": 5.52
+        },
+        "vascular_hemodynamic_matrix": {
+          "blood_pressure_stability_score": 0.0,
+          "nocturnal_hypotensive_crash_prevention_index": 0.0
+        },
+        "hepato_pancreatic_axis": {
+          "cytochrome_p450_stress_score": 58.1,
+          "nocturnal_glucose_stability_score": 97.4
+        }
+      },
+      "cross_interaction_validator": {
+        "bioavailability_amplification_multiplier": 1.33,
+        "safety_clearance_status": "APPROVED"
+      },
+      "saved_at": "2026-09-28 16:19:20.524003"
+    },
+    {
+      "class_executed": "cardio-stroke",
+      "formulation_metadata": {
+        "codename": "MOCK-RUN-37",
+        "vessel": "Dual-Chamber Antithrombotic Tablet"
+      },
+      "simulation_pathways": {
+        "hematological_vector": {
+          "platelet_aggregation_inhibition_rate": 0.67,
+          "fibrinolytic_clot_dissolution_index": 0.27
+        },
+        "vascular_endothelial_matrix": {
+          "arterial_wall_integrity_score": 100.0,
+          "capillary_fragility_mitigation_index": 54.7
+        }
+      },
+      "cross_interaction_validator": {
+        "haemostatic_interference_detected": false,
+        "safety_clearance_status": "APPROVED"
+      },
+      "saved_at": "2026-09-28 16:19:20.524018"
+    },
+    {
+      "class_executed": "neuro-sleep",
+      "formulation_metadata": {
+        "codename": "MOCK-RUN-38",
+        "vessel": "Vascular-Synchronized Core"
+      },
+      "simulation_pathways": {
+        "neuro_and_snayu_vector": {
+          "gaba_receptor_binding_rate": 2.09,
+          "snayu_active_stage_stimulation_index": 0.43,
+          "cortisol_suppression_velocity": 3.15
+        },
+        "vascular_hemodynamic_matrix": {
+          "blood_pressure_stability_score": 56.6,
+          "nocturnal_hypotensive_crash_prevention_index": 53.7
+        },
+        "hepato_pancreatic_axis": {
+          "cytochrome_p450_stress_score": 14.0,
+          "nocturnal_glucose_stability_score": 94.2
+        }
+      },
+      "cross_interaction_validator": {
+        "bioavailability_amplification_multiplier": 1.16,
+        "safety_clearance_status": "APPROVED"
+      },
+      "saved_at": "2026-09-28 16:19:20.524034"
+    },
+    {
+      "class_executed": "cardio-stroke",
+      "formulation_metadata": {
+        "codename": "MOCK-RUN-39",
+        "vessel": "Dual-Chamber Antithrombotic Tablet"
+      },
+      "simulation_pathways": {
+        "hematological_vector": {
+          "platelet_aggregation_inhibition_rate": 0.47,
+          "fibrinolytic_clot_dissolution_index": 0.14
+        },
+        "vascular_endothelial_matrix": {
+          "arterial_wall_integrity_score": 100.0,
+          "capillary_fragility_mitigation_index": 36.5
+        }
+      },
+      "cross_interaction_validator": {
+        "haemostatic_interference_detected": false,
+        "safety_clearance_status": "APPROVED"
+      },
+      "saved_at": "2026-09-28 16:19:20.524044"
+    },
+    {
+      "class_executed": "neuro-sleep",
+      "formulation_metadata": {
+        "codename": "MOCK-RUN-40",
+        "vessel": "Vascular-Synchronized Core"
+      },
+      "simulation_pathways": {
+        "neuro_and_snayu_vector": {
+          "gaba_receptor_binding_rate": 2.62,
+          "snayu_active_stage_stimulation_index": 0.95,
+          "cortisol_suppression_velocity": 6.58
+        },
+        "vascular_hemodynamic_matrix": {
+          "blood_pressure_stability_score": 97.8,
+          "nocturnal_hypotensive_crash_prevention_index": 92.9
+        },
+        "hepato_pancreatic_axis": {
+          "cytochrome_p450_stress_score": 25.4,
+          "nocturnal_glucose_stability_score": 98.8
+        }
+      },
+      "cross_interaction_validator": {
+        "bioavailability_amplification_multiplier": 1.35,
+        "safety_clearance_status": "APPROVED"
+      },
+      "saved_at": "2026-09-28 16:19:20.524057"
+    },
+    {
+      "class_executed": "cardio-stroke",
+      "formulation_metadata": {
+        "codename": "MOCK-RUN-41",
+        "vessel": "Dual-Chamber Antithrombotic Tablet"
+      },
+      "simulation_pathways": {
+        "hematological_vector": {
+          "platelet_aggregation_inhibition_rate": 0.93,
+          "fibrinolytic_clot_dissolution_index": 0.08
+        },
+        "vascular_endothelial_matrix": {
+          "arterial_wall_integrity_score": 82.6,
+          "capillary_fragility_mitigation_index": 47.7
+        }
+      },
+      "cross_interaction_validator": {
+        "haemostatic_interference_detected": false,
+        "safety_clearance_status": "APPROVED"
+      },
+      "saved_at": "2026-09-28 16:19:20.524070"
+    },
+    {
+      "class_executed": "neuro-sleep",
+      "formulation_metadata": {
+        "codename": "MOCK-RUN-42",
+        "vessel": "Vascular-Synchronized Core"
+      },
+      "simulation_pathways": {
+        "neuro_and_snayu_vector": {
+          "gaba_receptor_binding_rate": 2.86,
+          "snayu_active_stage_stimulation_index": 0.95,
+          "cortisol_suppression_velocity": 6.57
+        },
+        "vascular_hemodynamic_matrix": {
+          "blood_pressure_stability_score": 74.3,
+          "nocturnal_hypotensive_crash_prevention_index": 70.6
+        },
+        "hepato_pancreatic_axis": {
+          "cytochrome_p450_stress_score": 34.1,
+          "nocturnal_glucose_stability_score": 98.8
+        }
+      },
+      "cross_interaction_validator": {
+        "bioavailability_amplification_multiplier": 1.28,
+        "safety_clearance_status": "APPROVED"
+      },
+      "saved_at": "2026-09-28 16:19:20.524086"
+    },
+    {
+      "class_executed": "cardio-stroke",
+      "formulation_metadata": {
+        "codename": "MOCK-RUN-43",
+        "vessel": "Dual-Chamber Antithrombotic Tablet"
+      },
+      "simulation_pathways": {
+        "hematological_vector": {
+          "platelet_aggregation_inhibition_rate": 0.74,
+          "fibrinolytic_clot_dissolution_index": 0.12
+        },
+        "vascular_endothelial_matrix": {
+          "arterial_wall_integrity_score": 91.8,
+          "capillary_fragility_mitigation_index": 42.6
+        }
+      },
+      "cross_interaction_validator": {
+        "haemostatic_interference_detected": false,
+        "safety_clearance_status": "APPROVED"
+      },
+      "saved_at": "2026-09-28 16:19:20.524095"
+    },
+    {
+      "class_executed": "neuro-sleep",
+      "formulation_metadata": {
+        "codename": "MOCK-RUN-44",
+        "vessel": "Vascular-Synchronized Core"
+      },
+      "simulation_pathways": {
+        "neuro_and_snayu_vector": {
+          "gaba_receptor_binding_rate": 0.83,
+          "snayu_active_stage_stimulation_index": 0.93,
+          "cortisol_suppression_velocity": 8.95
+        },
+        "vascular_hemodynamic_matrix": {
+          "blood_pressure_stability_score": 87.8,
+          "nocturnal_hypotensive_crash_prevention_index": 83.4
+        },
+        "hepato_pancreatic_axis": {
+          "cytochrome_p450_stress_score": 0.0,
+          "nocturnal_glucose_stability_score": 101.9
+        }
+      },
+      "cross_interaction_validator": {
+        "bioavailability_amplification_multiplier": 1.16,
+        "safety_clearance_status": "APPROVED"
+      },
+      "saved_at": "2026-09-28 16:19:20.524112"
+    },
+    {
+      "class_executed": "cardio-stroke",
+      "formulation_metadata": {
+        "codename": "MOCK-RUN-45",
+        "vessel": "Dual-Chamber Antithrombotic Tablet"
+      },
+      "simulation_pathways": {
+        "hematological_vector": {
+          "platelet_aggregation_inhibition_rate": 0.98,
+          "fibrinolytic_clot_dissolution_index": 0.23
+        },
+        "vascular_endothelial_matrix": {
+          "arterial_wall_integrity_score": 68.9,
+          "capillary_fragility_mitigation_index": 32.5
+        }
+      },
+      "cross_interaction_validator": {
+        "haemostatic_interference_detected": false,
+        "safety_clearance_status": "APPROVED"
+      },
+      "saved_at": "2026-09-28 16:19:20.524128"
+    },
+    {
+      "class_executed": "neuro-sleep",
+      "formulation_metadata": {
+        "codename": "MOCK-RUN-46",
+        "vessel": "Vascular-Synchronized Core"
+      },
+      "simulation_pathways": {
+        "neuro_and_snayu_vector": {
+          "gaba_receptor_binding_rate": 4.71,
+          "snayu_active_stage_stimulation_index": 0.98,
+          "cortisol_suppression_velocity": 4.99
+        },
+        "vascular_hemodynamic_matrix": {
+          "blood_pressure_stability_score": 0.0,
+          "nocturnal_hypotensive_crash_prevention_index": 0.0
+        },
+        "hepato_pancreatic_axis": {
+          "cytochrome_p450_stress_score": 100.0,
+          "nocturnal_glucose_stability_score": 96.7
+        }
+      },
+      "cross_interaction_validator": {
+        "bioavailability_amplification_multiplier": 1.36,
+        "safety_clearance_status": "CRITICAL_TOXICITY"
+      },
+      "saved_at": "2026-09-28 16:19:20.524143"
+    },
+    {
+      "class_executed": "cardio-stroke",
+      "formulation_metadata": {
+        "codename": "MOCK-RUN-47",
+        "vessel": "Dual-Chamber Antithrombotic Tablet"
+      },
+      "simulation_pathways": {
+        "hematological_vector": {
+          "platelet_aggregation_inhibition_rate": 0.42,
+          "fibrinolytic_clot_dissolution_index": 0.16
+        },
+        "vascular_endothelial_matrix": {
+          "arterial_wall_integrity_score": 100.0,
+          "capillary_fragility_mitigation_index": 40.2
+        }
+      },
+      "cross_interaction_validator": {
+        "haemostatic_interference_detected": false,
+        "safety_clearance_status": "APPROVED"
+      },
+      "saved_at": "2026-09-28 16:19:20.524151"
+    },
+    {
+      "class_executed": "neuro-sleep",
+      "formulation_metadata": {
+        "codename": "MOCK-RUN-48",
+        "vessel": "Vascular-Synchronized Core"
+      },
+      "simulation_pathways": {
+        "neuro_and_snayu_vector": {
+          "gaba_receptor_binding_rate": 1.92,
+          "snayu_active_stage_stimulation_index": 0.96,
+          "cortisol_suppression_velocity": 2.58
+        },
+        "vascular_hemodynamic_matrix": {
+          "blood_pressure_stability_score": 7.4,
+          "nocturnal_hypotensive_crash_prevention_index": 7.0
+        },
+        "hepato_pancreatic_axis": {
+          "cytochrome_p450_stress_score": 10.1,
+          "nocturnal_glucose_stability_score": 93.4
+        }
+      },
+      "cross_interaction_validator": {
+        "bioavailability_amplification_multiplier": 1.34,
+        "safety_clearance_status": "CRITICAL_TOXICITY"
+      },
+      "saved_at": "2026-09-28 16:19:20.524172"
+    },
+    {
+      "class_executed": "cardio-stroke",
+      "formulation_metadata": {
+        "codename": "MOCK-RUN-49",
+        "vessel": "Dual-Chamber Antithrombotic Tablet"
+      },
+      "simulation_pathways": {
+        "hematological_vector": {
+          "platelet_aggregation_inhibition_rate": 0.4,
+          "fibrinolytic_clot_dissolution_index": 0.12
+        },
+        "vascular_endothelial_matrix": {
+          "arterial_wall_integrity_score": 100.0,
+          "capillary_fragility_mitigation_index": 55.4
+        }
+      },
+      "cross_interaction_validator": {
+        "haemostatic_interference_detected": false,
+        "safety_clearance_status": "APPROVED"
+      },
+      "saved_at": "2026-09-28 16:19:20.524182"
+    },
+    {
+      "class_executed": "neuro-sleep",
+      "formulation_metadata": {
+        "codename": "MOCK-RUN-50",
+        "vessel": "Vascular-Synchronized Core"
+      },
+      "simulation_pathways": {
+        "neuro_and_snayu_vector": {
+          "gaba_receptor_binding_rate": 3.41,
+          "snayu_active_stage_stimulation_index": 0.96,
+          "cortisol_suppression_velocity": 8.82
+        },
+        "vascular_hemodynamic_matrix": {
+          "blood_pressure_stability_score": 93.0,
+          "nocturnal_hypotensive_crash_prevention_index": 88.4
+        },
+        "hepato_pancreatic_axis": {
+          "cytochrome_p450_stress_score": 51.3,
+          "nocturnal_glucose_stability_score": 101.8
+        }
+      },
+      "cross_interaction_validator": {
+        "bioavailability_amplification_multiplier": 1.35,
+        "safety_clearance_status": "CRITICAL_TOXICITY"
+      },
+      "saved_at": "2026-09-28 16:19:20.524196"
+    },
+    {
+      "class_executed": "comp-oncology",
+      "formulation_metadata": {
+        "codename": "ONCO-SEED-01",
+        "vessel": "Targeted Nanoparticle & Botanical Liposome"
+      },
+      "simulation_pathways": {
+        "oncology_tumor_kinetics": {
+          "tumor_angiogenesis_inhibition_velocity": 0.95,
+          "cellular_apoptosis_induction_rate": 3.0
+        },
+        "healthy_tissue_cytoprotection": {
+          "non_tumor_cellular_integrity_score": 64.0,
+          "free_radical_scavenging_reserve": 9.6
+        }
+      },
+      "cross_interaction_validator": {
+        "cytoprotective_shield_engaged": true,
+        "safety_clearance_status": "APPROVED"
+      },
+      "saved_at": "2026-09-28 16:29:33.972735"
+    },
+    {
+      "class_executed": "comp-oncology",
+      "formulation_metadata": {
+        "codename": "ONCO-SEED-02",
+        "vessel": "Targeted Nanoparticle & Botanical Liposome"
+      },
+      "simulation_pathways": {
+        "oncology_tumor_kinetics": {
+          "tumor_angiogenesis_inhibition_velocity": 0.74,
+          "cellular_apoptosis_induction_rate": 4.0
+        },
+        "healthy_tissue_cytoprotection": {
+          "non_tumor_cellular_integrity_score": 86.5,
+          "free_radical_scavenging_reserve": 12.0
+        }
+      },
+      "cross_interaction_validator": {
+        "cytoprotective_shield_engaged": true,
+        "safety_clearance_status": "APPROVED"
+      },
+      "saved_at": "2026-09-28 16:29:33.978013"
+    },
+    {
+      "class_executed": "comp-oncology",
+      "formulation_metadata": {
+        "codename": "ONCO-SEED-03",
+        "vessel": "Targeted Nanoparticle & Botanical Liposome"
+      },
+      "simulation_pathways": {
+        "oncology_tumor_kinetics": {
+          "tumor_angiogenesis_inhibition_velocity": 0.99,
+          "cellular_apoptosis_induction_rate": 2.0
+        },
+        "healthy_tissue_cytoprotection": {
+          "non_tumor_cellular_integrity_score": 34.0,
+          "free_radical_scavenging_reserve": 6.4
+        }
+      },
+      "cross_interaction_validator": {
+        "cytoprotective_shield_engaged": true,
+        "safety_clearance_status": "CRITICAL_BONE_MARROW_SUPPRESSION"
+      },
+      "saved_at": "2026-09-28 16:29:33.982968"
+    },
+    {
+      "class_executed": "comp-oncology",
+      "formulation_metadata": {
+        "codename": "ONCO-SEED-04",
+        "vessel": "Targeted Nanoparticle & Botanical Liposome"
+      },
+      "simulation_pathways": {
+        "oncology_tumor_kinetics": {
+          "tumor_angiogenesis_inhibition_velocity": 0.99,
+          "cellular_apoptosis_induction_rate": 1.5
+        },
+        "healthy_tissue_cytoprotection": {
+          "non_tumor_cellular_integrity_score": 4.0,
+          "free_radical_scavenging_reserve": 3.2
+        }
+      },
+      "cross_interaction_validator": {
+        "cytoprotective_shield_engaged": false,
+        "safety_clearance_status": "CRITICAL_BONE_MARROW_SUPPRESSION"
+      },
+      "saved_at": "2026-09-28 16:29:33.987464"
+    },
+    {
+      "class_executed": "comp-oncology",
+      "formulation_metadata": {
+        "codename": "ONCO-SEED-05",
+        "vessel": "Targeted Nanoparticle & Botanical Liposome"
+      },
+      "simulation_pathways": {
+        "oncology_tumor_kinetics": {
+          "tumor_angiogenesis_inhibition_velocity": 0.99,
+          "cellular_apoptosis_induction_rate": 3.5
+        },
+        "healthy_tissue_cytoprotection": {
+          "non_tumor_cellular_integrity_score": 61.0,
+          "free_radical_scavenging_reserve": 11.2
+        }
+      },
+      "cross_interaction_validator": {
+        "cytoprotective_shield_engaged": true,
+        "safety_clearance_status": "APPROVED"
+      },
+      "saved_at": "2026-09-28 16:29:33.992052"
+    },
+    {
+      "class_executed": "tissue-regeneration",
+      "formulation_metadata": {
+        "codename": "REGEN-TissueMatrix-01",
+        "vessel": "Bio-Active Hydrogel Scaffolding Array"
+      },
+      "simulation_pathways": {
+        "regeneration_vector": {
+          "mitotic_cellular_replication_rate": 0.58,
+          "extracellular_matrix_deposition_velocity": 1.05
+        },
+        "structural_tissue_matrix": {
+          "scar_tissue_mitigation_index": 100.0,
+          "collagen_cross_linking_efficiency": 14.0
+        }
+      },
+      "cross_interaction_validator": {
+        "fibrotic_interference_detected": false,
+        "safety_clearance_status": "APPROVED"
+      },
+      "saved_at": "2026-09-28 17:42:14.313101"
+    }
+  ]
+}

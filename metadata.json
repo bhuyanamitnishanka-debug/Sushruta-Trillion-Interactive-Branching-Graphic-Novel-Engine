@@ -1,0 +1,6 @@
+{
+  "name": "Sushruta-Trillion: Interactive Branching Graphic-Novel Engine",
+  "description": "Mobile animated graphic-novel app & visual creator for crafting branching interactive storylines with animated panels, bio-informatics simulation choices, and dynamic motion comic effects.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,132 @@
+name: Sushruta-Trillion CI/CD & Deployment Pipeline
+
+on:
+  push:
+    branches: [ main, master, develop ]
+  pull_request:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  # ============================================================================
+  # JOB 1: Code Linting, Mathematical Boundary Checks & Pytest Suite
+  # ============================================================================
+  test-and-validate:
+    name: Unit & Boundary Testing (Python ${{ matrix.python-version }})
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ['3.10', '3.11']
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: 'pip'
+
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f sushruta-trillion-engine/requirements.txt ]; then
+            pip install -r sushruta-trillion-engine/requirements.txt
+          elif [ -f requirements.txt ]; then
+            pip install -r requirements.txt
+          fi
+          pip install pytest httpx flake8
+
+      - name: Static Code Analysis & Syntax Validation
+        run: |
+          # Stop the build if there are Python syntax errors or undefined names
+          flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics --exclude=.git,__pycache__,node_modules
+          # Exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
+          flake8 . --count --exit-zero --max-complexity=15 --max-line-length=127 --statistics --exclude=.git,__pycache__,node_modules
+
+      - name: Run 100-Trial Automated Boundary Diagnostic Suite
+        run: |
+          if [ -d sushruta-trillion-engine ]; then
+            cd sushruta-trillion-engine
+          fi
+          python tests/batch_tester.py
+
+      - name: Execute Full Pytest Test Suite
+        run: |
+          if [ -d sushruta-trillion-engine ]; then
+            cd sushruta-trillion-engine
+          fi
+          pytest -v --tb=short tests/
+
+  # ============================================================================
+  # JOB 2: Docker Container Build, Healthcheck Probe & Integration Gate
+  # ============================================================================
+  docker-build-and-verify:
+    name: Docker Build & Container Health Probe
+    runs-on: ubuntu-latest
+    needs: test-and-validate
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Build Docker Image
+        run: |
+          BUILD_DIR="sushruta-trillion-engine"
+          if [ ! -d "$BUILD_DIR" ]; then
+            BUILD_DIR="."
+          fi
+          docker build -t sushruta-trillion-engine:ci-test "$BUILD_DIR"
+
+      - name: Test Container Boot & Health Probe
+        run: |
+          # Launch container in background
+          docker run -d --name sushruta_test_runner -p 8000:8000 sushruta-trillion-engine:ci-test
+
+          # Wait for container startup
+          echo "Waiting for microservice liveness probe..."
+          sleep 4
+
+          # Query healthcheck endpoint
+          HEALTH_STATUS=$(curl -s -o /dev/null -w "%{http_code}" http://localhost:8000/health || echo "FAILED")
+          echo "Health check HTTP response code: $HEALTH_STATUS"
+
+          if [ "$HEALTH_STATUS" != "200" ]; then
+            echo "❌ Container failed healthcheck! Dumping logs:"
+            docker logs sushruta_test_runner
+            exit 1
+          fi
+
+          echo "✅ Container passed healthcheck with HTTP 200 OK!"
+
+          # Query root service metadata probe
+          curl -s http://localhost:8000/ | grep -q "Sushruta-Trillion"
+          echo "✅ Root service metadata verified!"
+
+          # Stop and remove test container
+          docker stop sushruta_test_runner
+          docker rm sushruta_test_runner
+
+  # ============================================================================
+  # JOB 3: Production Release Gate & Deployment Sign-off
+  # ============================================================================
+  deployment-readiness-gate:
+    name: Deployment Readiness Verification
+    runs-on: ubuntu-latest
+    needs: [test-and-validate, docker-build-and-verify]
+    if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
+
+    steps:
+      - name: Log Deployment Readiness
+        run: |
+          echo "🚀 All unit tests, 100-run boundary checks, and Docker container verification PASSED!"
+          echo "Release tag: v3.0.0-build-${{ github.sha }}"
+          echo "Status: READY FOR ENTERPRISE PRODUCTION ROLLOUT"

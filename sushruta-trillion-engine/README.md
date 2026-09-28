@@ -5,6 +5,7 @@
 [![Python Version](https://img.shields.io/badge/Python-3.10%20%7C%203.11-blue.svg?logo=python&logoColor=white)](https://python.org)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.110%2B-009688.svg?logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com)
 [![Pydantic v2](https://img.shields.io/badge/Pydantic-v2.6-E92063.svg?logo=pydantic&logoColor=white)](https://pydantic.dev)
+[![Code Style: Flake8](https://img.shields.io/badge/Code%20Style-Flake8-black.svg)](https://flake8.pycqa.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 **Sushruta-Trillion** is an enterprise-grade, containerized chemo-informatics microservice backend engineered to simulate, validate, and track complex multi-layered hybrid pharmacology models. By pairing strict mathematical validation curves with multi-threaded asynchronous routing pipelines, the engine models real-time drug-herb interactions across diverse biological layers simultaneously.
@@ -102,24 +103,166 @@ sushruta-trillion-engine/
 
 ---
 
-## 🐳 Docker Deployment
+## 🧬 Multi-Class Pharmacology Engines
 
+### 1. Central Nervous System Sleep Onset (`NH-Synchro-02-Max`)
+- **Hypnotic Core (Synthetic Zolpidem)**: Selective alpha-1 GABA-A subunit binding.
+- **Asava Yogavahi Carrier**: Non-linear membrane absorption booster ($A_{bio}$).
+- **Withania Somnifera (Ashwagandha)**: Hepatocyte cytoprotection buffering CYP450 stress ($S_{cyp}$).
+- **Snayu Nerve Stimulants (Jyotishmati/Kupilu)**: Calibrated neuromuscular reflex tone ($T_{snayu}$).
+- **Hemodynamic BP Modulators (Sarpagandha)**: Nocturnal blood pressure crash prevention.
+
+### 2. Cardiovascular-Stroke Prophylaxis (`CV-StrokeShield-01`)
+- **Allopathic Track**: Low-dose Antiplatelet (Salicylate / Clopidogrel) for immediate COX-1 / ADP P2Y12 thrombus occlusion block.
+- **Ayurvedic Track**: *Terminalia Arjuna* extract (eNOS endothelial wall protection) + Purified *Commiphora Mukul* (Guggulsterones for reverse cholesterol plaque remodeling).
+- **Dual-Chamber Delivery**: Chamber A fast dissolver + Chamber B enteric-coated sustained matrix.
+
+### 3. Computational Oncology Pathways (`ONCO-PathCheck-01`)
+- **Allopathic Cytotoxic Track**: Targeted chemotherapeutic molecules (Paclitaxel / Tyrosine Kinase Inhibitors) suppressing tumor angiogenesis velocity ($V_{tumor}$).
+- **Botanical Cytoprotective Track**: Active bio-fractionated *Ocimum sanctum* (Tulsi) for targeted tumor apoptosis induction + *Asparagus racemosus* (Shatavari) antioxidant reserve shielding healthy bone marrow and cellular integrity ($S_{healthy}$).
+
+---
+
+## 📡 REST API Endpoints Specification
+
+### 1. Health & Readiness Probe
+```http
+GET /health
+```
+**Response:**
+```json
+{
+  "status": "healthy",
+  "microservice": "sushruta-trillion-engine",
+  "container_ready": true
+}
+```
+
+### 2. Run Multi-Class Simulation
+```http
+POST /api/v3/simulate/{medicine_class}
+```
+*Supported `medicine_class` paths:* `neuro-sleep`, `cardio-stroke`, `comp-oncology`
+
+#### Example Oncology Request:
 ```bash
-# Quickstart with Docker Compose
-docker compose up -d
+curl -X POST "http://localhost:8000/api/v3/simulate/comp-oncology" \
+     -H "Content-Type: application/json" \
+     -d '{
+       "codename": "ONCO-SHIELD-V1",
+       "parameters": {
+         "allopathic_chemo_intensity": 45.0,
+         "apoptosis_herbal_intensity": 320.0,
+         "cytoprotective_factor": 120.0
+       }
+     }'
+```
 
-# Check live service health
-curl http://localhost:8000/health
+#### Example Response:
+```json
+{
+  "class_executed": "comp-oncology",
+  "formulation_metadata": {
+    "codename": "ONCO-SHIELD-V1",
+    "vessel": "Targeted Nanoparticle & Botanical Liposome"
+  },
+  "simulation_pathways": {
+    "oncology_tumor_kinetics": {
+      "tumor_angiogenesis_inhibition_velocity": 0.84,
+      "cellular_apoptosis_induction_rate": 3.2
+    },
+    "healthy_tissue_cytoprotection": {
+      "non_tumor_cellular_integrity_score": 64.0,
+      "free_radical_scavenging_reserve": 9.6
+    }
+  },
+  "cross_interaction_validator": {
+    "cytoprotective_shield_engaged": true,
+    "safety_clearance_status": "APPROVED"
+  }
+}
+```
+
+### 3. Historical Database Analytics
+```http
+GET /api/v3/analytics
+```
+**Response:**
+```json
+{
+  "total_simulations_recorded": 60,
+  "approved_count": 52,
+  "warning_count": 5,
+  "critical_alert_count": 3,
+  "database_integrity": "OK"
+}
 ```
 
 ---
 
-## 🧪 Testing & CI/CD Validation
+## 🐳 Containerized Deployment (Docker & Compose)
 
+### 1. Standard Docker Run
 ```bash
-# Run 100-run automated boundary diagnostic suite
-python sushruta-trillion-engine/tests/batch_tester.py
+# Build the production image
+docker build -t sushruta-trillion-engine:3.0.0 .
 
-# Run pytest unit tests
-pytest -v sushruta-trillion-engine/tests/
+# Run container as isolated non-root process on port 8000
+docker run -d \
+  --name sushruta-engine \
+  -p 8000:8000 \
+  -v $(pwd)/simulation_db.json:/app/simulation_db.json \
+  sushruta-trillion-engine:3.0.0
+
+# Verify liveness
+curl http://localhost:8000/health
 ```
+
+### 2. Docker Compose Orchestration
+```bash
+# Launch with persistent volume mounts and resource constraints
+docker compose up -d
+
+# Check live logs
+docker compose logs -f
+
+# Verify container health
+docker compose ps
+```
+
+---
+
+## 🧪 Automated Testing & Diagnostic Suite
+
+### Run 100-Trial Automated Boundary Analysis:
+```bash
+python tests/batch_tester.py
+```
+*Sample Test Output:*
+```json
+{
+  "total_trials_per_class": 100,
+  "cns_summary": { "approved": 78, "warning": 14, "critical": 8, "pass_rate_pct": 78.0 },
+  "cardio_summary": { "approved": 100, "pass_rate_pct": 100.0 },
+  "oncology_summary": { "approved": 82, "warning": 12, "critical": 6, "pass_rate_pct": 82.0 }
+}
+```
+
+### Run Pytest Integration Suite:
+```bash
+pytest -v --tb=short tests/
+```
+
+---
+
+## 🔄 GitHub Actions CI/CD Pipeline
+
+The repository includes a production-grade continuous integration workflow configured in `.github/workflows/deploy.yml`:
+1. **Matrix Testing:** Executes linting (`flake8`) and unit tests across Python 3.10 and 3.11.
+2. **Mathematical Boundary Diagnostics:** Runs the 100-trial simulation batch test to verify zero drift.
+3. **Container Build & Healthcheck Gate:** Builds the Docker container, boots it in the runner, checks HTTP `/health`, and verifies operational status before deployment sign-off.
+
+---
+
+## 📜 License
+Distributed under the MIT License. See `LICENSE` for more information.

@@ -1,0 +1,37 @@
+version: '3.8'
+
+services:
+  # --- BACKEND SIMULATION COMPUTE MICROSERVICE ---
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: sushruta_backend_container
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./simulation_db.json:/app/simulation_db.json  # Persists the atomic JSON logs on host device
+    environment:
+      - PYTHONDONTWRITEBYTECODE=1
+      - PYTHONUNBUFFERED=1
+    networks:
+      - sushruta_network
+    restart: unless-stopped
+
+  # --- FRONTEND NGINX WEB SERVER INTERFACE ---
+  frontend:
+    image: nginx:alpine
+    container_name: sushruta_frontend_container
+    ports:
+      - "80:80"
+    volumes:
+      - ./static:/usr/share/nginx/html  # Mounts your index.html into Nginx web root directory
+    networks:
+      - sushruta_network
+    depends_on:
+      - backend
+    restart: unless-stopped
+
+networks:
+  sushruta_network:
+    driver: bridge

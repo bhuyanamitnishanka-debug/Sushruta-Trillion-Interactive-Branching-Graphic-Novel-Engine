@@ -1,0 +1,110 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-display: 'Cinzel', serif;
+    --font-heading: 'Syne', sans-serif;
+    --font-body: 'Plus Jakarta Sans', sans-serif;
+    --font-comic: 'Bangers', cursive;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  body {
+    font-family: var(--font-body);
+    background-color: #030712;
+    color: #f3f4f6;
+    -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-heading {
+  font-family: var(--font-heading);
+}
+
+.font-comic {
+  font-family: var(--font-comic);
+}
+
+.font-mono-code {
+  font-family: var(--font-mono);
+}
+
+/* Comic Halftone Dot Effect */
+.comic-halftone {
+  background-image: radial-gradient(rgba(245, 158, 11, 0.12) 1.5px, transparent 1.5px);
+  background-size: 14px 14px;
+}
+
+.comic-halftone-dark {
+  background-image: radial-gradient(rgba(0, 0, 0, 0.3) 1.5px, transparent 1.5px);
+  background-size: 12px 12px;
+}
+
+/* Animations for Dynamic Comic Panels */
+@keyframes kenburns-pan-left {
+  0% { transform: scale(1.02) translateX(0%); }
+  100% { transform: scale(1.14) translateX(-4%); }
+}
+
+@keyframes kenburns-zoom-in {
+  0% { transform: scale(1.0); }
+  100% { transform: scale(1.16); }
+}
+
+@keyframes kenburns-tilt {
+  0% { transform: scale(1.05) rotate(0deg); }
+  50% { transform: scale(1.1) rotate(1deg); }
+  100% { transform: scale(1.05) rotate(0deg); }
+}
+
+@keyframes comic-shake {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  10%, 30%, 50%, 70%, 90% { transform: translate(-3px, 2px) rotate(-0.5deg); }
+  20%, 40%, 60%, 80% { transform: translate(3px, -2px) rotate(0.5deg); }
+}
+
+@keyframes scanline {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(1000%); }
+}
+
+.anim-pan-left {
+  animation: kenburns-pan-left 12s ease-out infinite alternate;
+}
+
+.anim-zoom-in {
+  animation: kenburns-zoom-in 10s ease-out infinite alternate;
+}
+
+.anim-tilt {
+  animation: kenburns-tilt 8s ease-in-out infinite;
+}
+
+.anim-shake {
+  animation: comic-shake 0.45s ease-in-out;
+}
+
+.anim-scan {
+  animation: scanline 4s linear infinite;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #090d16;
+}
+::-webkit-scrollbar-thumb {
+  background: #1f293d;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #374151;
+}
